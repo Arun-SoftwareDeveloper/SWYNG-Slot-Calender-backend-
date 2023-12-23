@@ -22,11 +22,9 @@ exports.initializeSlots = async () => {
       { start: "14:00", end: "15:00" },
       { start: "15:00", end: "16:00" },
       { start: "16:00", end: "17:00" },
-      // Add more time slots as needed
     ];
 
     for (let year = startYear; year <= endYear; year++) {
-      // Loop through each day of the year
       for (let month = 0; month < 12; month++) {
         for (let day = 1; day <= 31; day++) {
           // Note: This doesn't handle varying days in each month, you may want to improve this part
@@ -163,8 +161,8 @@ async function sendConfirmationEmail(
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "arunramasamy46@gmail.com", // replace with your Gmail email
-        pass: "pruxtxnekznczdpc", // replace with your Gmail password
+        user: "arunramasamy46@gmail.com",
+        pass: "pruxtxnekznczdpc",
       },
     });
     const mailOptions = {
